@@ -1,0 +1,104 @@
+.navigation {
+  margin-bottom: 30px;
+
+  // .navigation__container
+  &__container {
+    padding: 0;
+    min-width: 100vw;
+  }
+  // .navigation__list
+  &__list {
+    display: flex;
+    padding: 0 calc((100vw / 2) - (var(--container) / 2));
+    overflow-y: hidden;
+    overflow-x: auto;
+    column-gap: 8px;
+  }
+  // .navigation__item
+  &__item {
+  }
+  // .navigation__button
+  &__button {
+    border-radius: 50px;
+    background-color: #fff;
+    padding: 7px 8px 7px 40px;
+    font-size: 12px;
+    line-height: 16px;
+    white-space: nowrap;
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: 8px center;
+    &:hover,
+    &:focus-visible {
+      outline: 1px solid #f86310;
+      outline-offset: -1px;
+    }
+    @supports not selector(:focus-visible) {
+      &:focus {
+        outline: 1px solid #f86310;
+        outline-offset: -1px;
+      }
+    }
+    // .navigation__button_burger
+    &_burger {
+      background-image: url("../img/burger.png");
+    }
+    &_active {
+      pointer-events: none;
+      background-color: #ffab08;
+      &:focus {
+        outline: none;
+      }
+    }
+    // .navigation__button_active
+    // .navigation__button_snack
+    &_snack {
+      background-image: url(../img/snack.png);
+    }
+    // .navigation__button_hot-dog
+    &_hot-dog {
+      background-image: url(../img/hot-dog.png);
+    }
+    // .navigation__button_combo
+    &_combo {
+      background-image: url(../img/combo.png);
+    }
+    // .navigation__button_shawarma
+    &_shawarma {
+      background-image: url(../img/shawarma.png);
+    }
+    // .navigation__button_pizza
+    &_pizza {
+      background-image: url(../img/pizza.png);
+    }
+    // .navigation__button_wok
+    &_wok {
+      background-image: url(../img/voc.png);
+    }
+    // .navigation__button_dessert
+    &_dessert {
+      background-image: url(../img/desert.png);
+    }
+    // .navigation__button_sauce
+    &_sauce {
+      background-image: url(../img/souce.png);
+    }
+  }
+  @media (min-width: 768px) {
+    &__list {
+      column-gap: 12px;
+    }
+  }
+  @media (min-width: 1024px) {
+    margin-bottom: 50px;
+    &__list {
+      column-gap: 24px;
+    }
+    &__button {
+      padding: 9px 14px 9px 46px;
+      font-size: 16px;
+      line-height: 22px;
+      background-position: 14px center;
+    }
+  }
+}
